@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form.form-inline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+form.form-inline input[type="text"],
+form.form-inline input[type="number"] {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+form.form-inline button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form.form-inline button:hover {
+    background-color: #0056b3;
+}
+
+form.form-inline .delete-btn {
+    background-color: #dc3545;
+}
+
+form.form-inline .delete-btn:hover {
+    background-color: #c82333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul li h2 {
+    margin: 0;
+    color: #333;
+}
+
+ul li p {
+    margin: 5px 0;
+    color: #777;
+}
+
+ul li form {
+    margin-top: 10px;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    color: green;
+    margin-top: 10px;
+}

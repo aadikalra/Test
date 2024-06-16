@@ -1,0 +1,12 @@
+<%- include('layout') %>
+<div class="content">
+    <h1>Leaderboard</h1>
+    <ul>
+        <% competitors.forEach((competitor, index) => { %>
+            <li>
+                <h2><%= index + 1 %>. <%= competitor.name %> - <%= competitor.totalWater %> ml</h2>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/">Go back to the main page</a>
+</div>
