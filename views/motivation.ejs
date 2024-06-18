@@ -1,0 +1,28 @@
+<%- include('layout') %>
+
+    <div class="container mt-3">
+        <h1 class="text-center" style="        font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;">Motivation</h1>
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <p class="card-text text-center"></p>
+                <button id="getQuoteBtn" class="btn btn-primary" style="margin-left: 31.3vw;">I need motivation</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('getQuoteBtn').addEventListener('click', async () => {
+            const response = await fetch('https://type.fit/api/quotes');
+            const data = await response.json();
+            const randomIndex = Math.floor(Math.random() * data.length);
+            const quote = data[randomIndex].text;
+            document.querySelector('.card-text').textContent = `"${quote}"`;
+        });
+    </script>

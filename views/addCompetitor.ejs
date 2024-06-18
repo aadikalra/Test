@@ -1,0 +1,20 @@
+<%- include('layout') %>
+
+<div class="container mt-3">
+    <h1 class="text-center"  style="        font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;">Add Competitor</h1>
+
+    <form action="/add-competitor" method="POST" class="row g-3">
+        <div class="col-auto">
+            <input type="text" name="name" class="form-control" placeholder="Competitor Name" required>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Add Competitor</button>
+        </div>
+    </form>
+</div>

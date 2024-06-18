@@ -1,0 +1,17 @@
+<%- include('layout') %>
+
+<div class="container mt-3">
+    <h2 class="text-center" style="font-size: x-large;"><b>My Water Intake</b></h2>
+    <form action="/myWaterIntake" method="POST" class="row g-3">
+        <div class="col-auto">
+            <select name="name" class="form-control" required>
+                <% competitors.forEach(competitor => { %>
+                    <option value="<%= competitor.name %>"><%= competitor.name %></option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">View Water Intake</button>
+        </div>
+    </form>
+</div>

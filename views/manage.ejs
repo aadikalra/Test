@@ -1,0 +1,45 @@
+<%- include('layout') %>
+
+<div class="container mx-auto mt-8">
+    <div class="content">
+        <h2 class="text-center" style="        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px; ">Manage</h2>
+        <div class="row">
+            <div class="col-sm-6 mb-4">
+                <div class="card h-full border-0 shadow-sm rounded-lg overflow-hidden">
+                    <div class="card-body">
+                        <h5 class="card-title text-xl font-semibold text-gray-800">Log Water</h5>
+                        <p class="card-text text-gray-600">Log your water intake.</p>
+                        <a href="/logWater" class="btn btn-primary mt-4">Log</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-4">
+                <div class="card h-full border-0 shadow-sm rounded-lg overflow-hidden">
+                    <div class="card-body">
+                        <h5 class="card-title text-xl font-semibold text-gray-800">Delete Competitor</h5>
+                        <p class="card-text text-gray-600">Delete a competitor from the leaderboard.</p>
+                        <a href="/deleteCompetitor" class="btn btn-primary mt-4">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-4">
+                <div class="card h-full border-0 shadow-sm rounded-lg overflow-hidden">
+                    <div class="card-body">
+                        <h5 class="card-title text-xl font-semibold text-gray-800">Water Intake</h5>
+                        <p class="card-text text-gray-600">Check your records of water logging.</p>
+                        <a href="/myWaterIntake" class="btn btn-primary mt-4">Water Intake</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-6">
+            <a href="/" class="btn btn-primary">Go back to the main page</a>
+        </div>
+    </div>
+</div>

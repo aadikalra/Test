@@ -1,0 +1,41 @@
+<%- include('layout') %>
+
+    <div class="container mt-3">
+        <h1 class="text-center"  style="        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;">Log Water</h1>
+
+        <form action="/logWater" method="POST" onsubmit="return promptForPassword(this)">
+            <div class="mb-3">
+                <label for="name" class="form-label">Choose your name:</label>
+                <select name="name" id="name" class="form-select" required>
+                    <% competitors.forEach(competitor=> { %>
+                        <option value="<%= competitor.name %>">
+                            <%= competitor.name %>
+                        </option>
+                        <% }) %>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="amount" class="form-label">Amount (ml):</label>
+                <input type="number" name="amount" class="form-control" id="amount" min="1" required>
+            </div>
+            <input type="hidden" name="password">
+            <button type="submit" class="btn btn-primary">Log Water</button>
+        </form>
+    </div>
+
+    <script>
+        function promptForPassword(form) {
+            var password = prompt("Please enter your password:");
+            if (password) {
+                form.password.value = password;
+                return true;
+            }
+            return false;
+        }
+    </script>

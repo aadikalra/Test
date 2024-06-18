@@ -1,0 +1,37 @@
+<%- include('layout') %>
+
+<div class="container mx-auto mt-8">
+    <div class="content">
+        <h2 class="text-center"  style="
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;" >Delete Competitor</h2>
+        <form action="/deleteCompetitor" method="POST">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700">Competitor Name</label>
+                <select name="name" id="name" class="form-select" required>
+                    <% competitors.forEach(competitor=> { %>
+                        <option value="<%= competitor.name %>">
+                            <%= competitor.name %>
+                        </option>
+                        <% }) %>
+                </select>
+                <!-- <input type="text" id="name" name="name" class="form-control" required> -->
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <div class="text-center mt-6">
+                <button type="submit" class="btn btn-danger">Delete Competitor</button>
+            </div>
+        </form>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-primary">Go back to the main page</a>
+        </div>
+    </div>
+</div>
